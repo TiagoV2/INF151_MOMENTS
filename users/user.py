@@ -39,11 +39,13 @@ def log_out(uid):
     
 
 if __name__ == '__main__':
-    dummy_email = 'testFunc1@test.com'
-    dummy_password = '12345678'
-    dummy_name = 'test'
-    dummy_username = 'tester'
-    u1 = register_user(dummy_email, dummy_password,dummy_name,dummy_username)
-    m1 = u1[1]
-    login_user(m1.get_email(), '12345678')
-    log_out(m1.get_uid())
+    testing = False
+    if testing:
+        dummy_email = 'testFunc1@test.com'
+        dummy_password = '12345678'
+        dummy_name = 'test'
+        dummy_username = 'tester'
+        u1 = register_user(dummy_email, dummy_password,dummy_name,dummy_username)
+        m1 = u1[1]
+        login_user(m1.get_email(), '12345678')
+        log_out(m1.get_uid())
