@@ -1,0 +1,2 @@
+# Firebase Authentication
+firebase-admin>=5.0.0
