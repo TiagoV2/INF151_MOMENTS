@@ -71,7 +71,7 @@ def log_out(uid):
     
 
 if __name__ == '__main__':
-    testing = True
+    testing = False
     if testing:
         dummy_email = 'testFunc2@test.com'
         dummy_password = '12345678'
