@@ -6,10 +6,13 @@ import os
 from dotenv import load_dotenv
 import json
 
+current_dir = os.getcwd()
+auth_file = os.path.join(current_dir, 'userAuth.json')
+
 load_dotenv()
 firebase_api_key = os.getenv("FIREBASE_API_KEY")
 
-cred = credentials.Certificate("auth/moments-404519-firebase-adminsdk-zknme-dc5669db02.json")
+cred = credentials.Certificate(auth_file)
 firebase_admin.initialize_app(cred)
 
 def register_user(email, password, name, username,dob=""):

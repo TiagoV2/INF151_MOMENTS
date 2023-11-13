@@ -1,2 +1,4 @@
 users/auth/moments-404519-firebase-adminsdk-zknme-dc5669db02.json
 .env
+.ds_store
+userAuth.json
