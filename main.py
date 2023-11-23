@@ -37,7 +37,7 @@ class MomentsApp(MDApp):
 
 if __name__ == "__main__":
 	Window.size = (300, 600)
-	Builder.load_file("loginPage.kv")
+	Builder.load_file("login.kv")
 	Builder.load_file("createAccountPage.kv")
 	Builder.load_file("todaysPrompt.kv")
 	MomentsApp().run()
