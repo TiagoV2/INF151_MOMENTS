@@ -1,4 +1,4 @@
-import sqlite
+import sqlite3
 import os
 
 DATABASE_PATH = os.path.join(os.getcwd(), 'userData', 'user_credentials.db')
@@ -32,7 +32,7 @@ def changePassword(userName):
 		return False
 	
 
-def printAllUsernames():
+def printAllUserNames():
 	conn = sqlite3.connect(DATABASE_PATH)
 	cursor = conn.cursor()
 
@@ -44,3 +44,6 @@ def printAllUsernames():
 	for username in usernames:
 		print("Username:", username[0])
 
+if __name__ == "__main__":
+	printAllUserNames()
+	#removeUser(USERNAMEHERE)

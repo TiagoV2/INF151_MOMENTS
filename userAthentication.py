@@ -40,6 +40,5 @@ def createAccount(userName, password):
 	cursor.execute('INSERT INTO users (userName, password) VALUES (?, ?)', (userName, password))
 	conn.commit()
 	conn.close()
-	printAllUsernames()
 	return True
 
