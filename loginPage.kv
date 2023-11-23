@@ -1,0 +1,72 @@
+<MomentsLogin>:
+    MDLabel:
+		text: "Welcome"
+        font_size: "48dp"
+        halign: "center"
+        color: "#FF5623"
+        pos_hint: {"center_y": .8}
+
+    MDTextField:
+		id: username
+        hint_text: "Username"
+        icon_right: "account"
+        font_size: "20dp"
+        size_hint_x: .85
+        pos_hint: {"center_x": .5, "center_y": .6}
+        on_text: self.text = self.text.replace(" ", "")
+        write_tab: False
+
+    MDTextField:
+        id: pwd
+        hint_text: "Password"
+        password: True
+        icon_right: "eye-off"
+        font_size: "20dp"
+        size_hint_x: .85
+        pos_hint: {"center_x": .5, "center_y": .4}
+        spacing: "5dp"
+        on_text: self.text = self.text.replace(" ", "")
+        write_tab: False
+
+    BoxLayout:
+        size_hint: .85, None
+        height: "30dp"
+        pos_hint: {"center_x": .5, "center_y": .3}
+        spacing: "5dp"
+
+        MDCheckbox:
+            id: cb
+            size_hint: None, None
+            width: "30dp"
+            height: "30dp"
+            pos_hint: {"center_x": .5, "center_y": .5}
+            on_press:
+                pwd.password = not pwd.password
+                pwd.icon_right = "eye" if pwd.icon_right == "eye-off" else "eye-off"
+
+        MDLabel:
+            text: "[ref=Show Password]Show Password[/ref]"
+            markup: True
+            pos_hint: {"center_x": .5, "center_y": .5}
+            on_ref_press:
+                cb.active = not cb.active
+                pwd.password = not pwd.password
+                pwd.icon_right = "eye" if pwd.icon_right == "eye-off" else "eye-off"
+
+    BoxLayout:
+        size_hint: .6, None
+        height: "30dp"
+        pos_hint: {"center_x": .5, "center_y": .2}
+        spacing: "15dp"
+
+        MDFlatButton:
+            text: "SIGN IN"
+            font_size: "22dp"
+            md_bg_color: "#FF5623"
+			on_release: root.login(username.text, pwd.text)
+
+        MDFlatButton:
+            text: "SIGN UP"
+            font_size: "22dp"
+            md_bg_color: "#FF5623"
+			on_release: app.root.current = 'createAccount'

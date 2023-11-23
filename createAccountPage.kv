@@ -1,0 +1,80 @@
+<MomentsCreateAccount>:
+    MDLabel:
+        text: "Create Account"
+        font_size: "48dp"
+        halign: "center"
+        color: "#FF5623"
+        pos_hint: {"center_y": .8}
+
+    MDTextField:
+		id: username
+        hint_text: "Username"
+        icon_right: "account"
+        font_size: "20dp"
+        size_hint_x: .85
+        pos_hint: {"center_x": .5, "center_y": .6}
+        write_tab: False
+
+    MDTextField:
+        id: pwd1
+        hint_text: "Password"
+        password: True
+        icon_right: "eye-off"
+        font_size: "20dp"
+        size_hint_x: .85
+        pos_hint: {"center_x": .5, "center_y": .5}
+        write_tab: False
+
+    BoxLayout:
+        size_hint: .85, None
+        height: "30dp"
+        pos_hint: {"center_x": .5, "center_y": .3}
+        spacing: "5dp"
+
+        MDCheckbox:
+            id: cb
+            size_hint: None, None
+            width: "30dp"
+            height: "30dp"
+            pos_hint: {"center_x":.5, "center_y":.5}
+            on_press:
+                pwd1.password = not pwd1.password
+                pwd2.password = not pwd2.password
+				pwd1.icon_right = "eye" if pwd1.icon_right == "eye-off" else "eye-off"
+				pwd2.icon_right = "eye" if pwd2.icon_right == "eye-off" else "eye-off"
+
+        MDLabel:
+            text: "[ref=Show Password]Show Password[/ref]"
+            markup: True
+            pos_hint: {"center_x":.5, "center_y":.5}
+            on_ref_press:
+                cb.active = not cb.active
+                pwd1.password = not pwd1.password
+				pwd2.password = not pwd2.password
+                pwd1.icon_right = "eye" if pwd1.icon_right == "eye-off" else "eye-off"
+				pwd2.icon_right = "eye" if pwd2.icon_right == "eye-off" else "eye-off"
+
+    MDTextField:
+        id: pwd2
+        hint_text: "Re-Enter Password"
+        password: True
+        icon_right: "eye-off"
+        font_size: "20dp"
+        size_hint_x: .85
+        pos_hint: {"center_x": .5, "center_y": .4}
+        write_tab: False
+
+    MDFlatButton:
+        text: "Sign Up"
+        font_size: "22dp"
+        md_bg_color: "#FF5623"
+        pos_hint: {"center_x": .5, "center_y": .3}
+        on_release: root.createAccount(username.text, pwd1.text, pwd2.text)
+
+    MDFlatButton:
+        text: "Back"
+        font_size: "22dp"
+        md_bg_color: "#FF5623"
+        pos_hint: {"center_x": .5, "center_y": .2}
+        on_release: app.root.current = 'login'
+
