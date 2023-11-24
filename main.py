@@ -3,6 +3,7 @@ from kivy.uix.screenmanager import Screen, ScreenManager
 from kivymd.app import MDApp
 from kivy.core.window import Window
 from userAthentication import verifyUser, createAccount
+from kivy.uix.camera import Camera
 
 class MomentsLogin(Screen):
 	def login(self, userName, password):
@@ -22,6 +23,13 @@ class MomentsCreateAccount(Screen):
 class todaysPrompt(Screen):
 	pass
 
+class home(Screen):
+	pass
+
+class postImage(Screen):
+	def capture(self):
+		self.ids.cam.export_to_png("photo.png")
+
 class WindowManager(ScreenManager):
 	pass
 
@@ -33,12 +41,16 @@ class MomentsApp(MDApp):
 		sm.add_widget(MomentsLogin(name='login'))
 		sm.add_widget(MomentsCreateAccount(name='createAccount'))
 		sm.add_widget(todaysPrompt(name="todaysPrompt"))
+		sm.add_widget(home(name="home"))
+		sm.add_widget(postImage(name="postImage"))
 		return sm
 
 if __name__ == "__main__":
 	Window.size = (300, 600)
-	Builder.load_file("login.kv")
-	Builder.load_file("createAccountPage.kv")
-	Builder.load_file("todaysPrompt.kv")
+	Builder.load_file("pages/login.kv")
+	Builder.load_file("pages/createAccountPage.kv")
+	Builder.load_file("pages/todaysPrompt.kv")
+	Builder.load_file("pages/home.kv")
+	Builder.load_file("pages/postImage.kv")
 	MomentsApp().run()
 

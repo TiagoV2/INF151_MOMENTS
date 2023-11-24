@@ -1,0 +1,23 @@
+<todaysPrompt>
+	FloatLayout:
+		#padding: 20
+
+		MDLabel:
+			text: "Today's Prompt"
+			font_size: "24dp"
+			color: "#FF5623"
+			pos_hint: {"center_x": 0.7, "center_y": 0.8}
+
+		Button:
+			text:"Exit"
+			color: "#FF5623"
+			pos_hint: {"right":1, "top":1}
+			size_hint:.3, .05
+			on_release: app.root.current = 'home'
+
+		Button:
+			text:"Post"
+			color: "#FF5623"
+			size_hint:.3, .05
+			pos_hint: {"center_x": 0.5, "center_y": 0.2}
+			on_release: app.root.current = "postImage"

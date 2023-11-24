@@ -1,0 +1,11 @@
+<postImage>:
+	BoxLayout:
+		orientation: "vertical"
+		Camera:
+			id: cam
+			play: True
+			size_hint_y:0.9
+		Button:
+			text: 'Capture'
+			on_press: root.capture()
+			size_hint_y: 0.1
