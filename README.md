@@ -25,10 +25,24 @@ pip3 install sqlite3
 
 ## File Structure
     INF151_MOMENTS
+    │   
     ├── appImages
     │   ├── friends.png
     │   ├── imageEditor.py
     │   ├── profile.png
+    │   
+    ├── main.py
+    │    
+    ├── tests
+    │   ├── 
+    │     
+    ├── userData
+    │   ├── loginInfoDatabase.py
+    │   ├── user_credentials.db
+    │   
+    ├── databaseManager.py
+    │   ├── 
+    │
     ├── pages
     │   ├── createAccountPage.kv
     │   ├── home.kv
@@ -36,10 +50,9 @@ pip3 install sqlite3
     │   ├── postImage.kv
     │   ├── settings.kv
     │   ├── todaysPrompt.kv
-    ├── userData
-    │   ├── loginInfoDatabase.py
-    │   ├── user_credentials.db
-
+    │  
+    ├── userAthentication.py
+    │  
 
 ## Known Issues / Missing Items
 1. Settings Page
