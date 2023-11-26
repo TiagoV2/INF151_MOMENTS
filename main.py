@@ -9,15 +9,13 @@ class MomentsLogin(Screen):
 	def login(self, userName, password):
 		if verifyUser(userName, password):
 			self.manager.current = "todaysPrompt"
-		else:
-			print("Invalid working")
+		# add a pop up message to help the user
 
 class MomentsCreateAccount(Screen):
 	def createAccount(self, userName, password, reEnteredPassword):
 		if password == reEnteredPassword and createAccount(userName, password):
 			self.manager.current = "todaysPrompt"
-		else:
-			print("Not new User or password != reEnteredPassword")
+		# add a pop up to help the user understand
 			
 
 class todaysPrompt(Screen):

@@ -1,12 +1,18 @@
 <settings>:
 	FloatLayout:
-		Button: 
+		Button:
 			text: "Log Out"
-        	size_hint: None, None
-        	size: '100sp', '48sp'
-        	pos_hint: {'right': 0.3, 'y': 0}
+			size_hint: None, None
+			size: '100sp', '48sp'
+			pos_hint: {'right': 0.3, 'y': 0}
 		Button:
 			text: "Share this App"
 			size_hint: None, None
 			size: '100sp', '48sp'
 			pos_hint: {'right': 1, 'y': 0}
+		MDIconButton:
+			icon: "arrow-left"
+			user_font_size: '48sp'
+			pos_hint: {'right': 0.15, 'y': .9}
+			on_release: app.root.current = "home"
+
