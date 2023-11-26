@@ -25,7 +25,7 @@ pip3 install sqlite3
 
 ## File Structure
 
-'''
+'''bash
 project_root/
 │
 ├── appImages/
