@@ -44,7 +44,12 @@ project_root/
     ├── loginInfoDatabase.py
     └── user_credentials.db
 
-
+## Known Issues / Missing Items
+1. Settings Page
+2. Incomplete home page
+3. Logout feature
+4. Adding friends
+5. Posting caputured iamges
 
 
 ## Tutorials and References
