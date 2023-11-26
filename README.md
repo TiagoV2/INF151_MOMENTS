@@ -10,7 +10,7 @@ thought of as a social media shared albumn.
 * users are able to create an account, login, post an image onto their page, and create a prompt with their friends.
 * Python3, kivy, kivymd, sql
 
-##Setup
+## Setup
 1. clone this project
    git clone https://github.com/TiagoV2/INF151_MOMENTS.git
 
@@ -23,7 +23,7 @@ pip3 install sqlite3
 4. cd PATH2 INF151_MOMENTS
   python3 main.py
 
-##File Structure
+## File Structure
 
 project_root/
 │
