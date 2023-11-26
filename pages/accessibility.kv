@@ -1,0 +1,14 @@
+<accessibility>:
+	FloatLayout:
+		Label:
+			text: "Accessibility"
+			size_hint: None, None
+			size: self.texture_size
+			pos_hint: {'center_x': .5, 'center_y': .5}
+
+		MDIconButton:
+			icon: "arrow-left"
+			user_font_size: '48sp'
+			pos_hint: {'right': 0.15, 'y': .9}
+			on_release: app.root.current = "settings"
+

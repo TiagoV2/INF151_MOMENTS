@@ -31,6 +31,21 @@ class postImage(Screen):
 class settings(Screen):
 	pass
 
+class general(Screen):
+	pass
+
+class accountDetails(Screen):
+	pass
+
+class language(Screen):
+	pass
+
+class accessibility(Screen):
+	pass
+
+class privacy(Screen):
+	pass
+
 class WindowManager(ScreenManager):
 	pass
 
@@ -45,6 +60,11 @@ class MomentsApp(MDApp):
 		sm.add_widget(home(name="home"))
 		sm.add_widget(postImage(name="postImage"))
 		sm.add_widget(settings(name="settings"))
+		sm.add_widget(general(name="general"))
+		sm.add_widget(accountDetails(name="accountDetails"))
+		sm.add_widget(language(name="language"))
+		sm.add_widget(privacy(name="privacy"))
+		sm.add_widget(accessibility(name="accessibility"))
 		return sm
 
 if __name__ == "__main__":
@@ -55,5 +75,9 @@ if __name__ == "__main__":
 	Builder.load_file("pages/home.kv")
 	Builder.load_file("pages/postImage.kv")
 	Builder.load_file("pages/settings.kv")
+	Builder.load_file("pages/general.kv")
+	Builder.load_file("pages/accountDetails.kv")
+	Builder.load_file("pages/accessibility.kv")
+	Builder.load_file("pages/privacy.kv")
 	MomentsApp().run()
 
