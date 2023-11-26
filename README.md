@@ -25,6 +25,7 @@ pip3 install sqlite3
 
 ## File Structure
 
+"""
 project_root/
 │
 ├── appImages/
@@ -43,6 +44,7 @@ project_root/
 └── userData/
     ├── loginInfoDatabase.py
     └── user_credentials.db
+"""
 
 ## Known Issues / Missing Items
 1. Settings Page
