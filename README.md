@@ -47,7 +47,7 @@ project_root/
 
 
 
-##tutorials and References
+## Tutorials and References
 1. Login and Sign up Page
   <a href="https://youtu.be/5X5pK9r5fdg">KIVY/KIVYMD - Login Page, Sign up Page | Python Login Screen Tutorial by Python With Sh1de</a>
   * Used the following video to get inspiration for the login page and the create account page. Watched as a team to learn how to use the framework kivy.
