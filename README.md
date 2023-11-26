@@ -24,7 +24,7 @@ pip3 install sqlite3
   python3 main.py
 
 ## File Structure
-    INF
+    INF151_MOMENTS
     ├── appImages
     │   ├── friends.png
     │   ├── imageEditor.py
