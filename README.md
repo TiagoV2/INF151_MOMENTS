@@ -27,23 +27,23 @@ pip3 install sqlite3
 
 project_root/
 │
-└───appImages/
-|    |  friends.png
-|    |  imageEditor.py
-|    |  profile.png
-|
-└───pages/
-|    │  createAccountPage.kv
-|    │  home.kv
-|    │  login.kv
-|    │  postImage.kv
-|    │  settings.kv
-|    │  todaysPrompt.kv
-|
-└───userData/
-|    |  loginInfoDatabase.py
-|    |  user_credentials.db
-|    |
+├── appImages/
+│   ├── friends.png
+│   ├── imageEditor.py
+│   └── profile.png
+│
+├── pages/
+│   ├── createAccountPage.kv
+│   ├── home.kv
+│   ├── login.kv
+│   ├── postImage.kv
+│   ├── settings.kv
+│   └── todaysPrompt.kv
+│
+└── userData/
+    ├── loginInfoDatabase.py
+    └── user_credentials.db
+
 
 
 
