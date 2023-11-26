@@ -24,27 +24,22 @@ pip3 install sqlite3
   python3 main.py
 
 ## File Structure
+    INF
+    ├── appImages
+    │   ├── friends.png
+    │   ├── imageEditor.py
+    │   ├── profile.png
+    ├── pages
+    │   ├── createAccountPage.kv
+    │   ├── home.kv
+    │   ├── login.kv
+    │   ├── postImage.kv
+    │   ├── settings.kv
+    │   ├── todaysPrompt.kv
+    ├── userData
+    │   ├── loginInfoDatabase.py
+    │   ├── user_credentials.db
 
-'''bash
-project_root/
-│
-├── appImages/
-│   ├── friends.png
-│   ├── imageEditor.py
-│   └── profile.png
-│
-├── pages/
-│   ├── createAccountPage.kv
-│   ├── home.kv
-│   ├── login.kv
-│   ├── postImage.kv
-│   ├── settings.kv
-│   └── todaysPrompt.kv
-│
-└── userData/
-    ├── loginInfoDatabase.py
-    └── user_credentials.db
-'''
 
 ## Known Issues / Missing Items
 1. Settings Page
