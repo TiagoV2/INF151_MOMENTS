@@ -30,6 +30,9 @@ class postImage(Screen):
 	def capture(self):
 		self.ids.cam.export_to_png("photo.png")
 
+class settings(Screen):
+	pass
+
 class WindowManager(ScreenManager):
 	pass
 
@@ -43,6 +46,7 @@ class MomentsApp(MDApp):
 		sm.add_widget(todaysPrompt(name="todaysPrompt"))
 		sm.add_widget(home(name="home"))
 		sm.add_widget(postImage(name="postImage"))
+		sm.add_widget(settings(name="settings"))
 		return sm
 
 if __name__ == "__main__":
@@ -52,5 +56,6 @@ if __name__ == "__main__":
 	Builder.load_file("pages/todaysPrompt.kv")
 	Builder.load_file("pages/home.kv")
 	Builder.load_file("pages/postImage.kv")
+	Builder.load_file("pages/settings.kv")
 	MomentsApp().run()
 

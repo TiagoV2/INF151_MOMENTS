@@ -5,7 +5,8 @@
         padding: 10
 
         ScrollView:
-            do_scroll_x: True
+            do_scroll_x: False
+			do_scroll_y: True
 
             BoxLayout:
                 orientation: 'vertical'
@@ -17,17 +18,15 @@
                     text: 'Activity 1'
                     size_hint_y: None
                     height: '48dp'
-	#FloatLayout:
-		
-	#	Button:
-	#		size: "48dp", "48dp"
-	#		pos_hint: {'x': 0, 'y': 0}
-	#		background_normal: 'path/to/profile_icon.png'
-	#		background_down: 'path/to/friends_icon_down.png'
-			
 
-	#	Button:
-	#		size: "48dp", "48dp"
-	#		pos_hint: {'right': 1, 'y': 0}
-	#		background_normal: 'path/to/friends_icon.png'
-	#		background_down: 'path/to/friends_icon_down.png'
+	FloatLayout:
+		MDIconButton:
+			icon: "account-multiple"
+			user_font_size: '48sp'
+			pos_hint: {'right': 0.2, 'y': 0}
+
+		MDIconButton:
+			icon: "account-box"
+			user_font_size: '48sp'
+			pos_hint: {'right': 1, 'y': 0}
+			on_release: app.root.current = "settings"

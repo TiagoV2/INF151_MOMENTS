@@ -46,4 +46,3 @@ def printAllUserNames():
 
 if __name__ == "__main__":
 	printAllUserNames()
-	#removeUser(USERNAMEHERE)
