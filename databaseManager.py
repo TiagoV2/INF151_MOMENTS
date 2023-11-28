@@ -31,6 +31,16 @@ def changePassword(userName):
 		conn.close()
 		return False
 	
+def getCurrentUserName():
+    # This function retrieves the current user's name from the database
+    # You may need to pass some identifier for the current user (e.g., user ID) to this function
+    # and modify the SQL query accordingly
+    conn = sqlite3.connect(DATABASE_PATH)
+    cursor = conn.cursor()
+    cursor.execute('SELECT userName FROM users WHERE user_id = ?', (current_user_id,))
+    current_user_name = cursor.fetchone()[0]  # Fetch the first column of the result (username)
+    conn.close()
+    return current_user_name
 
 def printAllUserNames():
 	conn = sqlite3.connect(DATABASE_PATH)
